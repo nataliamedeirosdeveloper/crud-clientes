@@ -7,13 +7,14 @@ using CrudClientes.API.Models;
 
 namespace CrudClientes.API.Data
 {
-    public DataContext(DbContextOptions<DataContext> options) : base(options)
-    {
-        
-    }
+    
 
     public class DataContext : DbContext
     {
+        public DataContext(DbContextOptions<DataContext> options) : base(options)
+        {
+        }
+        
         public DbSet<Cliente> Clientes { get; set; }
     }
 }
