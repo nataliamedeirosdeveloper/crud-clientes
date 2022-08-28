@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace CrudClientes.API.Models
+namespace CrudClientes.Domain.Models
 {
     public class Cliente
     {
@@ -11,7 +11,7 @@ namespace CrudClientes.API.Models
         
         public string Nome { get; set; }
         
-        public string DtNascimento { get; set; }
+        public DateTime DtNascimento { get; set; }
         
         public string CPF { get; set; }
 

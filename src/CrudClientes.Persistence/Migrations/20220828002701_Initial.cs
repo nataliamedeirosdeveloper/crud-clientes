@@ -1,6 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace CrudClientes.API.Migrations
+namespace CrudClientes.Persistence.Migrations
 {
     public partial class Initial : Migration
     {
@@ -13,7 +14,7 @@ namespace CrudClientes.API.Migrations
                     ClienteId = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     Nome = table.Column<string>(type: "TEXT", nullable: true),
-                    DtNascimento = table.Column<string>(type: "TEXT", nullable: true),
+                    DtNascimento = table.Column<DateTime>(type: "TEXT", nullable: false),
                     CPF = table.Column<string>(type: "TEXT", nullable: true),
                     EstadoCivil = table.Column<string>(type: "TEXT", nullable: true),
                     Email = table.Column<string>(type: "TEXT", nullable: true),

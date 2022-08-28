@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using CrudClientes.API.Models;
+using CrudClientes.Domain.Models;
 
-namespace CrudClientes.API.Data
+namespace CrudClientes.Persistence.Data
 {
     
 
-    public class DataContext : DbContext
+    public class CrudClientesContext : DbContext
     {
-        public DataContext(DbContextOptions<DataContext> options) : base(options)
+        public CrudClientesContext(DbContextOptions<CrudClientesContext> options) : base(options)
         {
         }
         

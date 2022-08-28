@@ -11,7 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
-using CrudClientes.API.Data;
+using CrudClientes.Persistence.Data;
 using Microsoft.EntityFrameworkCore;
 
 namespace CrudClientes.API
@@ -28,7 +28,7 @@ namespace CrudClientes.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<DataContext>(
+            services.AddDbContext<CrudClientesContext>(
                 context => context.UseSqlite(Configuration.GetConnectionString("Default"))
             );
             services.AddControllers();

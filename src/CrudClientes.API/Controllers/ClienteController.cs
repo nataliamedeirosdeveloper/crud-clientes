@@ -4,8 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using CrudClientes.API.Models;
-using CrudClientes.API.Data;
+using CrudClientes.Domain.Models;
+using CrudClientes.Persistence.Data;
 
 namespace CrudClientes.API.Controllers
 {
@@ -13,8 +13,8 @@ namespace CrudClientes.API.Controllers
     [Route("api/[controller]")]
     public class ClienteController : ControllerBase
     {
-        private readonly DataContext context;
-        public ClienteController(DataContext _context)
+        private readonly CrudClientesContext context;
+        public ClienteController(CrudClientesContext _context)
         {
             context = _context;
         }
